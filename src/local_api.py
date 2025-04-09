@@ -1,3 +1,5 @@
+"""Local API call"""
+
 from openai import OpenAI
 
 
