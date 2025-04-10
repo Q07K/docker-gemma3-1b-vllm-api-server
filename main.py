@@ -8,8 +8,7 @@ def main(query: str):
     load_dotenv()
 
     base_url = "http://localhost:8000/v1"
-    api_key = os.getenv("LOCAL_MODEL_API_KEY", None)
-    api_key = "$LOCAL_MODEL_API_KEY"
+    api_key = os.getenv("API_KEY", None)
 
     client = OpenAI(
         base_url=base_url,
@@ -17,7 +16,7 @@ def main(query: str):
     )
 
     completion = client.chat.completions.create(
-        model="google/gemma-3-1b-it",
+        model="./google/gemma-3-1b-it",
         messages=[
             {"role": "user", "content": query},
         ],
