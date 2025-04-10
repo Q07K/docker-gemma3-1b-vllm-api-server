@@ -1,27 +1,26 @@
 FROM ubuntu:22.04
 
- # 1. 필요한 패키지 설치
- RUN apt-get update && \
-     apt-get install -y --no-install-recommends \
-         python3-pip \
-         python3.10-dev \
-         build-essential \
-     && rm -rf /var/lib/apt/lists/*
+# 1. 필요한 패키지 설치
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        python3-pip \
+        python3.10-dev \
+        build-essential \
+    && rm -rf /var/lib/apt/lists/*
 
- # 2. workdir 설정
- WORKDIR /vllm
+# 2. workdir 설정
+WORKDIR /vllm
 
- # 3. pip 업그레이드 및 필요한 패키지 설치
- COPY requirements.txt .
- RUN pip install --upgrade pip && pip install -r requirements.txt
+# 3. pip 업그레이드 및 필요한 패키지 설치
+COPY requirements.txt .
+RUN pip install --upgrade pip && pip install -r requirements.txt
 
- # 4. 애플리케이션 소스 복사
- COPY . .
+# 4. 애플리케이션 소스 복사
+COPY . .
 
- # 5. 포트 노출
- EXPOSE 8000
+# 5. 포트 노출
+EXPOSE 8000
 
-# 11. vLLM 서버 실행
-# vLLM API 서버를 시작하고, 모델 경로, 호스트, 포트, API 키, 데이터 타입을 지정합니다.
-# './gemma-3-4b-it'은 4번에서 복사된 모델 디렉토리를 의미
-CMD ["vllm", "serve", "google/gemma-3-1b-it", "--host", "0.0.0.0", "--port", "8000", "--api-key", "$LOCAL_MODEL_API_KEY", "--dtype", "half", "--max-num-seqs", "1"]
+# 6. entrypoint.sh 실행 
+ENTRYPOINT ["./entrypoint.sh"]
+CMD []
