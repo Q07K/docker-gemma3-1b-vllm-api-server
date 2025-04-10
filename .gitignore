@@ -173,5 +173,5 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
-# gemma-3-4b-it
-model_build/gemma-3-4b-it
+# gemma-3-1b-it
+model_build/gemma-3-1b-it
