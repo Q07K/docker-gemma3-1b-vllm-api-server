@@ -1,4 +1,4 @@
- FROM ubuntu:22.04
+FROM ubuntu:22.04
 
  # 1. 필요한 패키지 설치
  RUN apt-get update && \
@@ -24,4 +24,4 @@
 # 11. vLLM 서버 실행
 # vLLM API 서버를 시작하고, 모델 경로, 호스트, 포트, API 키, 데이터 타입을 지정합니다.
 # './gemma-3-4b-it'은 4번에서 복사된 모델 디렉토리를 의미
-CMD ["vllm", "serve", "./gemma-3-4b-it", "--host", "0.0.0.0", "--port", "8000", "--api-key", "$LOCAL_MODEL_API_KEY", "--dtype=half",  "--max-model-len", "8192", "--max-num-seqs", "1"]
+CMD ["vllm", "serve", "google/gemma-3-1b-it", "--host", "0.0.0.0", "--port", "8000", "--api-key", "$LOCAL_MODEL_API_KEY", "--dtype", "half", "--max-num-seqs", "1"]
