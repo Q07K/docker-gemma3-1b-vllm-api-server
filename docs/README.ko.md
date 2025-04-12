@@ -1,6 +1,6 @@
 # docker-gemma3-1b-vllm-api-server
 
-[![English](https://img.shields.io/badge/Language-English-blue)](README.md)
+[![English](https://img.shields.io/badge/Language-English-blue)](/README.md)
 ![Korean](https://img.shields.io/badge/Language-한국어-gray)
 [![日本語](https://img.shields.io/badge/Language-日本語-blue)](/docs/README.ja.md)
 
