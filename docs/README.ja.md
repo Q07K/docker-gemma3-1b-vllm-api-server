@@ -14,8 +14,9 @@
 
 ## はじめに
 
-### 1. `gemma-3-1b-it` モデルのダウンロード
-- Visit: [HuggingFace - gemma-3-1b-it](https://huggingface.co/google/gemma-3-1b-it)
+### 1. `gemma-3-1b-it` モデルのアクセスを申請
+- リンク: [HuggingFace - gemma-3-1b-it](https://huggingface.co/google/gemma-3-1b-it)
+- **「Access repository」** ボタンをクリックし、利用規約に同意してください。
 
 ### 2. `uv` (Python package manager)のインストール
 - Guide: [uv Installation Docs](https://docs.astral.sh/uv/getting-started/installation/)
