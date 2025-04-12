@@ -9,7 +9,7 @@ RUN apt-get update && \
     && rm -rf /var/lib/apt/lists/*
 
 # 2. workdir 설정
-WORKDIR /vllm
+WORKDIR /app
 
 # 3. pip 업그레이드 및 필요한 패키지 설치
 COPY requirements.txt .
@@ -22,5 +22,4 @@ COPY . .
 EXPOSE 8000
 
 # 6. entrypoint.sh 실행 
-ENTRYPOINT ["./entrypoint.sh"]
-CMD []
+ENTRYPOINT ["/app/entrypoint.sh"]
