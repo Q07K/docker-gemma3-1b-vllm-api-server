@@ -65,6 +65,7 @@ docker run --gpus all -i -t -p 8000:8000 -e api_key="..." gemma3-1b:v1.0.0
 ```
 
 ## API 서버 실행
+API 서버를 시작하려면 다음 명령어를 실행하세요:
 ```sh
 python main.py
 ```
