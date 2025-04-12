@@ -13,8 +13,9 @@
 
 ## Getting Started
 
-### 1. Download `gemma-3-1b-it` model
+### 1. Request access to `gemma-3-1b-it` model
 - Visit: [HuggingFace - gemma-3-1b-it](https://huggingface.co/google/gemma-3-1b-it)
+- Click **"Access repository"** and agree to the terms for usage.
 
 ### 2. Install `uv` (Python package manager)
 - Guide: [uv Installation Docs](https://docs.astral.sh/uv/getting-started/installation/)
